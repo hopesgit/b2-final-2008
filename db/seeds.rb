@@ -5,13 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Doctor.create(Name: "Meredith Grey", Specialty: "General Surgery", Education: "Harvard University")
-Doctor.create(Name: "Alex Karev", Specialty: "Pediatric Surgery", Education: "Johns Hopkins University")
-Doctor.create(Name: "Miranda Bailey", Specialty: "General Surgery", Education: "Stanford University")
-Doctor.create(Name: "Derek McDreamy Shepherd", Specialty: "Attending Surgeon", Education: "University of Pennsylvania")
+Doctor.create(Name: "Meredith Grey", Specialty: "General Surgery", Education: "Harvard University", hospital_id: memorial.id)
+Doctor.create(Name: "Alex Karev", Specialty: "Pediatric Surgery", Education: "Johns Hopkins University", hospital_id: memorial.id)
+Doctor.create(Name: "Miranda Bailey", Specialty: "General Surgery", Education: "Stanford University", hospital_id: seaside.id)
+Doctor.create(Name: "Derek McDreamy Shepherd", Specialty: "Attending Surgeon", Education: "University of Pennsylvania", hospital_id: seaside.id)
 
-Hospital.create(Name: "Grey Sloan Memorial Hospital")
-Hospital.create(Name: "Seaside Health & Wellness Center")
+memorial = Hospital.create(Name: "Grey Sloan Memorial Hospital")
+seaside = Hospital.create(Name: "Seaside Health & Wellness Center")
 
 Patient.create(Name: "Katie Bryce", Age: 24)
 Patient.create(Name: "Denny Duquette", Age: 39)
