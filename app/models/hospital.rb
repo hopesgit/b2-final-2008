@@ -7,7 +7,6 @@ class Hospital < ApplicationRecord
   end
 
   def alumni
-    # binding.pry
     self.doctors.select(:education).distinct.pluck(:education)
   end
 end
