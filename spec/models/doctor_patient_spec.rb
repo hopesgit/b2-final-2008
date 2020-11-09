@@ -7,7 +7,7 @@ describe DoctorPatient, type: :model do
   end
 
   describe "relationships" do
-    it { should belong_to(:patients) }
-    it { should belong_to(:hospitals) }
+    it { should belong_to(:doctor) }
+    it { should belong_to(:patient) }
   end
 end

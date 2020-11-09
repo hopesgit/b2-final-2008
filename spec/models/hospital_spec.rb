@@ -6,6 +6,6 @@ describe Hospital, type: :model do
   end
 
   describe "relationships" do
-    it { should have_many(:doctors).through(:employees) }
+    it { should have_many :doctors }
   end
 end
