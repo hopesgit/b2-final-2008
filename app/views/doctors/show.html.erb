@@ -6,6 +6,6 @@
 <br>
 <% @doctor.patients.each do |patient| %>
   <section id="patient-<%= patient.id %>">
-    <%= patient.name %>
+    <p><%= patient.name %> <%= button_to "Remove", doctor_path(@doctor), method: :patch %></p>
   </section>
 <% end %>
