@@ -15,9 +15,14 @@ describe Hospital, type: :model do
       @meredith = Doctor.create(name: "Meredith Grey", specialty: "General Surgery", education: "Harvard University", hospital_id: @memorial.id)
       @alex = Doctor.create(name: "Alex Karev", specialty: "Pediatric Surgery", education: "Harvard University", hospital_id: @memorial.id)
     end
-    
+
     it "#count_of_doctors" do
       expect(@memorial.count_of_doctors).to eq(2)
+    end
+
+    it "#alumni" do
+      expect(@memorial.alumni).to eq(["Harvard University"])
+      expect(@memorial.alumni).to_not eq(["Harvard University, Harvard University"])
     end
   end
 end
